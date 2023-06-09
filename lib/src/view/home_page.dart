@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
     return const Scaffold(
       body: Row(children: <Widget>[
         AppNavigationRail(),
+        Text('Currently a blank home page.')
       ]),
     );
   }
