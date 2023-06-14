@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/src/view/widgets/nav_rail.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Row(children: <Widget>[Text('Currently a blank home page.')]),
     );
   }
