@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AppNavigationRail extends StatefulWidget {
   const AppNavigationRail({super.key});
@@ -22,6 +23,17 @@ class _AppNavigationRailState extends State<AppNavigationRail> {
       onDestinationSelected: (int index) {
         setState(() {
           _selectedIndex = index;
+          switch (_selectedIndex) {
+            case 0:
+              {
+                context.go("/");
+              }
+              break;
+            case 1:
+              {
+                context.go("/blog");
+              }
+          }
         });
       },
       labelType: labelType,
@@ -46,6 +58,11 @@ class _AppNavigationRailState extends State<AppNavigationRail> {
           icon: Icon(Icons.home),
           selectedIcon: Icon(Icons.home_filled),
           label: Text('Home'),
+        ),
+        NavigationRailDestination(
+          icon: Icon(Icons.chat_bubble_outline),
+          label: Text('Blog'),
+          selectedIcon: Icon(Icons.chat_bubble),
         )
       ],
     );
