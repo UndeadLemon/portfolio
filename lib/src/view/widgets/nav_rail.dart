@@ -33,6 +33,12 @@ class _AppNavigationRailState extends State<AppNavigationRail> {
               {
                 context.go("/blog");
               }
+              break;
+            case 2:
+              {
+                context.go("/projects");
+              }
+              break;
           }
         });
       },
@@ -55,15 +61,20 @@ class _AppNavigationRailState extends State<AppNavigationRail> {
           : const SizedBox(),
       destinations: const <NavigationRailDestination>[
         NavigationRailDestination(
-          icon: Icon(Icons.home),
-          selectedIcon: Icon(Icons.home_filled),
+          icon: Icon(Icons.home_outlined),
+          selectedIcon: Icon(Icons.home),
           label: Text('Home'),
         ),
         NavigationRailDestination(
           icon: Icon(Icons.chat_bubble_outline),
           label: Text('Blog'),
           selectedIcon: Icon(Icons.chat_bubble),
-        )
+        ),
+        NavigationRailDestination(
+          icon: Icon(Icons.folder_outlined),
+          label: Text('Projects'),
+          selectedIcon: Icon(Icons.folder),
+        ),
       ],
     );
   }
