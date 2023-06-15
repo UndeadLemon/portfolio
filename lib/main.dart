@@ -56,7 +56,8 @@ final GoRouter _router = GoRouter(routes: [
         ),
         GoRoute(
           path: '/projects',
-          builder: (context, state) => const Placeholder(),
+          builder: (context, state) => Image.network(
+              "https://cdn.discordapp.com/attachments/1056405411584020503/1118735143062999072/dfw6m5v-c88f57fa-7141-4d32-a699-dd3b72725e9f.png"),
         ),
       ])
 ]);
