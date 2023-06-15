@@ -46,7 +46,17 @@ final GoRouter _router = GoRouter(routes: [
         );
       },
       routes: [
-        GoRoute(path: '/', builder: (context, state) => const HomePage()),
-        GoRoute(path: '/blog', builder: (context, state) => const Placeholder())
+        GoRoute(
+          path: '/',
+          builder: (context, state) => const HomePage(),
+        ),
+        GoRoute(
+          path: '/blog',
+          builder: (context, state) => const Placeholder(),
+        ),
+        GoRoute(
+          path: '/projects',
+          builder: (context, state) => const Placeholder(),
+        ),
       ])
 ]);
